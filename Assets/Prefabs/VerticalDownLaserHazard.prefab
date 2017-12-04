@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 33344462538068988}
   - component: {fileID: 64991971746336934}
   - component: {fileID: 23682217564008142}
-  - component: {fileID: 114224104720507108}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: VerticalDownLaserHazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,8 +40,9 @@ GameObject:
   - component: {fileID: 212958910882221856}
   - component: {fileID: 95556878096210624}
   - component: {fileID: 114722939380122788}
+  - component: {fileID: 114292129028486432}
   - component: {fileID: 61951830167295866}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646344990987594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.56, y: 4.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4663789472097102}
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0025572777, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 1}
     oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.32, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -173,18 +173,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114224104720507108
+--- !u!114 &114292129028486432
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646344990987594}
+  m_GameObject: {fileID: 1692644495313350}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5a0020b07cdd2c4ab224026318163a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 1646344990987594}
+  maxRange: 0
 --- !u!114 &114722939380122788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0b0e39ddaa1f44c9522e90eb450554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downTime: 1
+  downTime: 0
   UpTime: 2
   isLaserOn: 1
 --- !u!212 &212958910882221856
