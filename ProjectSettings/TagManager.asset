@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ThinPlatform
   - Hazard
+  - Boundary
+  - ThinPlatform
+  - deadly
   layers:
   - Default
   - TransparentFX
@@ -15,14 +17,14 @@ TagManager:
   - UI
   - 
   - 
-  - PlayerBullet
-  - EnemyBullet
-  - SolidPlatform
+  - Player
+  - GroundCheck
+  - Hazard
+  - Shootable
+  - Bullet
   - ThinPlatform
   - Enemy
-  - 
-  - 
-  - 
+  - PlayerBullet
   - 
   - 
   - 

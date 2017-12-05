@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1619097731818240}
   m_LocalRotation: {x: -0, y: -0, z: -0.9331805, w: 0.35940814}
   m_LocalPosition: {x: -0.82, y: -0.67, z: 0.029296875}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,11 +74,11 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: 1}
+  m_Offset: {x: 0.015367508, y: 0.0034514666}
   serializedVersion: 2
-  m_Radius: 0.0001
+  m_Radius: 0.25659
 --- !u!95 &95064570449471382
 Animator:
   serializedVersion: 3
@@ -86,7 +86,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619097731818240}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e42c2b16a17e9a742bdaec3ee7a06518, type: 2}
   m_CullingMode: 0
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9db2c2a53c62054b8d77acc14d03a61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 19f21e6d0a8dac846a71383b56747d1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

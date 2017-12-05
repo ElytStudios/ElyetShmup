@@ -30,7 +30,7 @@ public class PlayerShooter : MonoBehaviour
             if (pM.isFliped)
             {
                 GameObject bullet2d = Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
-                bullet2d.transform.Rotate(new Vector3(0, 0, 200));
+                bullet2d.transform.Rotate(new Vector3(0, 0, 180));
             }
             else
             {
