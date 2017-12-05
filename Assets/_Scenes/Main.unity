@@ -1630,11 +1630,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4524828044306458, guid: 9fb6cab816f0e5448b92ebce915288b6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.42
+      value: 11.46
       objectReference: {fileID: 0}
     - target: {fileID: 4524828044306458, guid: 9fb6cab816f0e5448b92ebce915288b6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.14
+      value: 2.11
       objectReference: {fileID: 0}
     - target: {fileID: 4524828044306458, guid: 9fb6cab816f0e5448b92ebce915288b6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3374,7 +3374,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114722939380122788, guid: 84e865f087d56ee4aaf59976d909a408, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 84e865f087d56ee4aaf59976d909a408, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1910153148
@@ -3410,6 +3411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 0
+  downTime: 0
+  UpTime: 0
+  isLaserOn: 1
 --- !u!114 &1910153150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3428,10 @@ MonoBehaviour:
   downTime: 5
   UpTime: 5
   isLaserOn: 0
+  laserLine: {fileID: 0}
+  laserSr: {fileID: 0}
+  laserCl: {fileID: 0}
+  timer: 0
 --- !u!114 &1910153151
 MonoBehaviour:
   m_ObjectHideFlags: 0

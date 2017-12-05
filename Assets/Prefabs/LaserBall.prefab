@@ -20,10 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4171119585104224}
   - component: {fileID: 212543587720046090}
-  - component: {fileID: 95236053553678068}
   - component: {fileID: 61895618406712500}
   - component: {fileID: 114331789746184588}
-  - component: {fileID: 114579564434424590}
   m_Layer: 9
   m_Name: Laser (3)
   m_TagString: Untagged
@@ -40,10 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4925466008874848}
   - component: {fileID: 212465483838790950}
-  - component: {fileID: 95373826555744678}
   - component: {fileID: 61052254781548270}
   - component: {fileID: 114143716511335682}
-  - component: {fileID: 114163228569311976}
   m_Layer: 9
   m_Name: Laser (2)
   m_TagString: Untagged
@@ -76,10 +72,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4001986706503150}
   - component: {fileID: 212087352476470434}
-  - component: {fileID: 95314625719360668}
   - component: {fileID: 61382017961838460}
   - component: {fileID: 114848112402988390}
-  - component: {fileID: 114740756166269324}
   m_Layer: 9
   m_Name: Laser (4)
   m_TagString: Untagged
@@ -129,10 +123,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4628447865606766}
   - component: {fileID: 212087466239093282}
-  - component: {fileID: 95436665114918566}
   - component: {fileID: 61499336400115920}
   - component: {fileID: 114800918149644824}
-  - component: {fileID: 114990377650047050}
   m_Layer: 9
   m_Name: Laser
   m_TagString: Untagged
@@ -397,74 +389,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13075733, y: 1.0393028}
   m_EdgeRadius: 0
---- !u!95 &95236053553678068
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1072872298862996}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: efbb2008ea126304ab1ffa591a971f01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95314625719360668
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398827783519626}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: efbb2008ea126304ab1ffa591a971f01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95373826555744678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098583209804074}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: efbb2008ea126304ab1ffa591a971f01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95436665114918566
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1647163960090600}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: efbb2008ea126304ab1ffa591a971f01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95483988522527668
 Animator:
   serializedVersion: 3
@@ -494,17 +418,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 40
---- !u!114 &114163228569311976
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098583209804074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0b0e39ddaa1f44c9522e90eb450554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   downTime: 0
   UpTime: 0
   isLaserOn: 1
@@ -520,31 +433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 40
---- !u!114 &114579564434424590
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1072872298862996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0b0e39ddaa1f44c9522e90eb450554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  downTime: 0
-  UpTime: 0
-  isLaserOn: 1
---- !u!114 &114740756166269324
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398827783519626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0b0e39ddaa1f44c9522e90eb450554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   downTime: 0
   UpTime: 0
   isLaserOn: 1
@@ -560,6 +448,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 40
+  downTime: 0
+  UpTime: 0
+  isLaserOn: 1
 --- !u!114 &114848112402988390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -572,17 +463,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 40
---- !u!114 &114990377650047050
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1647163960090600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0b0e39ddaa1f44c9522e90eb450554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   downTime: 0
   UpTime: 0
   isLaserOn: 1
