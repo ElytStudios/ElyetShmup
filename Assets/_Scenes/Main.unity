@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 45139336}
   - component: {fileID: 45139335}
   - component: {fileID: 45139334}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: ground_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,6 +424,23 @@ Transform:
   m_Father: {fileID: 1242116604}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &154930353 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1692644495313350, guid: 84e865f087d56ee4aaf59976d909a408,
+    type: 2}
+  m_PrefabInternal: {fileID: 1763395234}
+--- !u!114 &154930358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154930353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a0020b07cdd2c4ab224026318163a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 50
 --- !u!1 &236436401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1220,7 @@ GameObject:
   - component: {fileID: 768795243}
   - component: {fileID: 768795242}
   - component: {fileID: 768795244}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: ground_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2400,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1242116604}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2435,7 @@ GameObject:
   - component: {fileID: 1308145719}
   - component: {fileID: 1308145718}
   - component: {fileID: 1308145720}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: ground_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2517,7 +2534,7 @@ GameObject:
   - component: {fileID: 1333944553}
   - component: {fileID: 1333944552}
   - component: {fileID: 1333944554}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: ground_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3130,7 +3147,7 @@ GameObject:
   - component: {fileID: 1676732275}
   - component: {fileID: 1676732274}
   - component: {fileID: 1676732276}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: ground_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3374,8 +3391,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114722939380122788, guid: 84e865f087d56ee4aaf59976d909a408,
+        type: 2}
+      propertyPath: downTime
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114722939380122788, guid: 84e865f087d56ee4aaf59976d909a408, type: 2}
+    - {fileID: 114224104720507108, guid: 84e865f087d56ee4aaf59976d909a408, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 84e865f087d56ee4aaf59976d909a408, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1910153148
@@ -3410,10 +3433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0020b07cdd2c4ab224026318163a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRange: 0
-  downTime: 0
-  UpTime: 0
-  isLaserOn: 1
+  range: 50
 --- !u!114 &1910153150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3428,10 +3448,6 @@ MonoBehaviour:
   downTime: 5
   UpTime: 5
   isLaserOn: 0
-  laserLine: {fileID: 0}
-  laserSr: {fileID: 0}
-  laserCl: {fileID: 0}
-  timer: 0
 --- !u!114 &1910153151
 MonoBehaviour:
   m_ObjectHideFlags: 0

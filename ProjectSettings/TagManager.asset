@@ -20,7 +20,7 @@ TagManager:
   - Player
   - GroundCheck
   - Hazard
-  - Shootable
+  - SolidPlatform
   - Bullet
   - ThinPlatform
   - Enemy
