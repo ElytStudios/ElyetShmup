@@ -15,9 +15,12 @@ public class LaserHazard : MonoBehaviour
 
     private void Start()
     {
+
         laserSr = GetComponent<SpriteRenderer>();
         laserCl = GetComponent<BoxCollider2D>();
         shootableMask = LayerMask.GetMask("SolidPlatform");
+
+        laserSr.color = Color.clear;
     }
 
     private void FixedUpdate()
