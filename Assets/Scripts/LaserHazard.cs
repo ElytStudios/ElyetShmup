@@ -46,13 +46,11 @@ public class LaserHazard : MonoBehaviour
     {
         laserSr.color = Color.clear;
         laserCl.enabled = false;
-        Debug.Log("off");
     }
 
     public void laserOn()
     {
         laserSr.color = Color.white;
         laserCl.enabled = true;
-        Debug.Log("on");
     }
 }
