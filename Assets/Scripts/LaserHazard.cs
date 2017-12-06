@@ -29,11 +29,13 @@ public class LaserHazard : MonoBehaviour
             laserSr.size = new Vector2(laserSr.size.x, hit.distance);
 
             laserCl.size = new Vector2(laserCl.size.x, hit.distance);
+            laserCl.offset = new Vector2(0, -(hit.distance / 2));
         }
         else
         {
             laserSr.size = new Vector2(laserSr.size.x, range);
-            laserCl.size = new Vector2(laserSr.size.x, range);
+            laserCl.size = new Vector2(laserCl.size.x, range);
+            laserCl.offset = new Vector2(0, -(range / 2));
         }
     }
 }
