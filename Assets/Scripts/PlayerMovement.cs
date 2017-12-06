@@ -121,20 +121,21 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Flip, turn around
-        if (Input.GetKey(KeyCode.A) && !isFliped)
+        if (Input.GetKey(KeyCode.A) && !isFliped && !Input.GetKey(KeyCode.RightArrow))
         {
             Vector3 newScale = transform.localScale;
             newScale.x *= -1;
             transform.localScale = newScale;
+            playerAC.SetBool("isFlipped", true);
             isFliped = true;
         }
 
-        if (Input.GetKey(KeyCode.D) && isFliped)
+        if (Input.GetKey(KeyCode.D) && isFliped && !Input.GetKey(KeyCode.LeftArrow))
         {
             Vector3 newScale = transform.localScale;
             newScale.x *= -1;
             transform.localScale = newScale;
-
+            playerAC.SetBool("isFlipped", false);
             isFliped = false;
         }
 
@@ -179,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
                 print("Stoped aiming back");
             }
         }
-        else
+        else if (!isFliped)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -193,7 +194,5 @@ public class PlayerMovement : MonoBehaviour
                 print("Stoped aiming back");
             }
         }
-
-
     }
 }
