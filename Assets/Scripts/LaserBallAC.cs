@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class LaserBallAC : MonoBehaviour {
 
-    LaserHazard laserHazard;
-
-	void Start () {
-        laserHazard = GetComponentInChildren<LaserHazard>();
-	}
+    public LaserHazard[] laserHazard;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void LasersOn()
+    {
+        for (int i = 0; i < laserHazard.Length; ++i)
+        {
+            laserHazard[i].laserOn();
+        }
+    }
+
+    public void LasersOff()
+    {
+        for (int i = 0; i < laserHazard.Length; ++i)
+        {
+            laserHazard[i].laserOff();
+        }
+    }
 }

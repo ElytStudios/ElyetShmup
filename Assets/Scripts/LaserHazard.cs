@@ -38,4 +38,18 @@ public class LaserHazard : MonoBehaviour
             laserCl.offset = new Vector2(0, -(range / 2));
         }
     }
+
+    public void laserOff()
+    {
+        laserSr.color = Color.clear;
+        laserCl.enabled = false;
+        Debug.Log("off");
+    }
+
+    public void laserOn()
+    {
+        laserSr.color = Color.white;
+        laserCl.enabled = true;
+        Debug.Log("on");
+    }
 }
