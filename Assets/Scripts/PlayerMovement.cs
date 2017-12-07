@@ -111,13 +111,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             playerAC.SetBool("isCrouching", true);
-            print("crouching");
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
             playerAC.SetBool("isCrouching", false);
-            print("stoped crouching");
         }
 
         //Flip, turn around
@@ -130,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
             isFliped = true;
         }
 
+        //Stops player from flipping if aiming back
         if (Input.GetKey(KeyCode.D) && isFliped && !Input.GetKey(KeyCode.LeftArrow))
         {
             Vector3 newScale = transform.localScale;
@@ -143,26 +142,22 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             playerAC.SetBool("isAimingUp", true);
-            print("aiming up");
         }
 
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             playerAC.SetBool("isAimingUp", false);
-            print("Stoped aiming up");
         }
 
         //Aim down
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             playerAC.SetBool("isAimingDown", true);
-            print("aiming down");
         }
 
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             playerAC.SetBool("isAimingDown", false);
-            print("Stoped aiming  down");
         }
 
         //aim back
@@ -171,13 +166,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 playerAC.SetBool("isAimingBack", true);
-                print("aiming back");
             }
 
             if (Input.GetKeyUp(KeyCode.RightArrow))
             {
                 playerAC.SetBool("isAimingBack", false);
-                print("Stoped aiming back");
             }
         }
         else if (!isFliped)
@@ -185,13 +178,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 playerAC.SetBool("isAimingBack", true);
-                print("aiming back");
             }
 
             if (Input.GetKeyUp(KeyCode.LeftArrow))
             {
                 playerAC.SetBool("isAimingBack", false);
-                print("Stoped aiming back");
             }
         }
     }
