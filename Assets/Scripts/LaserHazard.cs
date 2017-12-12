@@ -8,7 +8,7 @@ using UnityEngine;
 public class LaserHazard : MonoBehaviour
 {
     public float range = 50f;
-
+    public bool alwaysOn = false;
     SpriteRenderer laserSr;
     BoxCollider2D laserCl;
     int shootableMask;
@@ -20,6 +20,7 @@ public class LaserHazard : MonoBehaviour
         laserCl = GetComponent<BoxCollider2D>();
         shootableMask = LayerMask.GetMask("SolidPlatform");
 
+        if (!alwaysOn)
         laserSr.color = Color.clear;
     }
 
