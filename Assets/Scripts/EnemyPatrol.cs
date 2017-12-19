@@ -9,6 +9,7 @@ public class EnemyPatrol : MonoBehaviour {
 	public float speed=0.5f;
 	public float timestill=2f;
 	public float sight=3f;
+	public float force;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,10 @@ public class EnemyPatrol : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		RaycastHit2D hit= Physics2D.Raycast (transform.position, transform.localScale.x * Vector2.right, sight);
+		if (hit.collider != null && hit.collider.tag == "Player")
+			GetComponent<Rigidbody2D> ().AddForce (Vector3.up*force + (hit.collider.transform.position-transform.position)*force);
 	}
 
 
@@ -49,14 +54,7 @@ public class EnemyPatrol : MonoBehaviour {
 
 			yield return null;
 
-			RaycastHit2D hit= Physics2D.Raycast (transform.position, transform.localScale.x * Vector2.right, sight);
-			if ((hit.collider != null && hit.collider.tag == "Player")) {
-				yield return new WaitForSeconds (100f);
 
-
-
-			} 
-				
 		}
 	}
 
