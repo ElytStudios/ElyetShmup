@@ -5,13 +5,15 @@ using System.Collections;
 public class EnemyPatrol : MonoBehaviour {
 
 	public Transform[] patrolpoints;
-	int currentPoint;
 	public float speed=0.5f;
 	public float timestill=2f;
 	public float sight=3f;
 
-	// Use this for initialization
-	void Start () {
+    int currentPoint;
+    bool isAgroad;
+    
+    // Use this for initialization
+    void Start () {
 		StartCoroutine ("Patrol");
 		Physics2D.queriesStartInColliders = false;
 	}
@@ -50,10 +52,8 @@ public class EnemyPatrol : MonoBehaviour {
 			yield return null;
 
 			RaycastHit2D hit= Physics2D.Raycast (transform.position, transform.localScale.x * Vector2.right, sight);
-			if ((hit.collider != null && hit.collider.tag == "Player")) {
-				yield return new WaitForSeconds (100f);
-
-
+			if ((hit.collider != null && hit.collider.tag == "Player"))
+            {
 
 			} 
 				

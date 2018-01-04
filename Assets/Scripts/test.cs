@@ -1,61 +1,90 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-
-/*
- * Controls pl;ayer shooting.
- * Spawns "bullet" at "shotSpawn"
- */
+using System.Collections;
 
 public class test : MonoBehaviour
 {
 
-	public float timeBetweenBullets = 0.15f;
-	public GameObject bullet;
-	public Transform shotSpawn;
-	public EnemyPatrol pM;
-	public float speed;
-	float timer;
-	public float sight=3f;
+    public Transform[] patrolpoints;
+    public float speed = 0.5f;
+    public float timestill = 2f;
+    public float sight = 3f;
 
-	// Update is called once per frame
-	void Update()
-	{
+    float waitTimer;
+    int currentPoint;
+    bool isAgroad;
+
+    // Use this for initialization
+    void Start()
+    {
+        Physics2D.queriesStartInColliders = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        waitTimer += Time.deltaTime;
+        print(waitTimer);
+        if (transform.position.x == patrolpoints[currentPoint].position.x && waitTimer >= timestill)
+        {
+            print("reached poss" + currentPoint);
+            currentPoint++;
+            waitTimer = 0;
+        }
+
+        if (currentPoint >= patrolpoints.Length)
+        {
+            currentPoint = 0;
+        }
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.localScale.x * Vector2.right, sight);
+        if ((hit.collider != null && hit.collider.tag == "Player"))
+        {
+            isAgroad = true;
+        }
+
+        if (!isAgroad)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(patrolpoints[currentPoint].position.x, transform.position.y), speed);
+
+            if (transform.position.x > patrolpoints[currentPoint].position.x)
+                transform.localScale = new Vector3(-1, 1, 1);
+            else if (transform.position.x < patrolpoints[currentPoint].position.x)
+                transform.localScale = Vector3.one;
+        }
+
+        if(isAgroad)
+        {
+            //Put agro code here
+        }
+
+    }
+
+
+    IEnumerator Patrol()
+    {
+        while (true)
+        {
 
 
 
-		timer += Time.deltaTime;
-
-		RaycastHit2D hit= Physics2D.Raycast (transform.position, transform.localScale.x * Vector2.right, sight);
-		if ((hit.collider != null && hit.collider.tag == "Player"))
-		{
-			timer = 0f;
-
-				GameObject bullet2d = Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
-				bullet2d.transform.Rotate(new Vector3(0, 0, 180));
+        }
+    }
 
 
-		           
-					
-
-			}
-		}
-
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.tag == "Projectile")
-			Destroy (this.gameObject, 0.1f);
-	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Projectile")
+            Destroy(this.gameObject, 0.1f);
+    }
 
 
-	void OnDrawGizmos()
-	{
-		Gizmos.color = Color.red;
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
 
-		Gizmos.DrawLine (transform.position, transform.position + transform.localScale.x * Vector3.right * sight);
+        Gizmos.DrawLine(transform.position, transform.position + transform.localScale.x * Vector3.right * sight);
 
-	}
+    }
 
 }
-
